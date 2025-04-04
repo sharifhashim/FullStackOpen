@@ -7,7 +7,12 @@ sequenceDiagram
 
     browser->>server: POST http://fullstack-exampleapp.herokuapp.com/new_note
     activate server
-    server->>browser: text/html
+    server->>browser: HTTP status code 302 URL redirect "reload page"
+    deactivate server
+
+    browser->>server: GET http://fullstack-exampleapp.herokuapp.com/notes
+    activate server
+    server->>browser: HTML document
     deactivate server
 
     browser->>server: GET http://fullstack-exampleapp.herokuapp.com/main.css
