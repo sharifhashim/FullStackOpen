@@ -5,7 +5,7 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: GET http://fullstack-exampleapp.herokuapp.com/notes
+    browser->>server: GET http://fullstack-exampleapp.herokuapp.com/spa
     activate server
     server->>browser: HTML document
     deactivate server
